@@ -1,3 +1,18 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = http://github.com/tpope/vim-fugitive.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/vim-scripts/Syntastic.git
+[submodule "bundle/vim4rally"]
+	path = bundle/vim4rally
+	url = https://github.com/vim-scripts/vim4rally
+[submodule "bundle/vimux"]
+	path = bundle/vimux
+	url = https://github.com/vim-scripts/vimux
+[submodule "vim/taglist"]
+	path = vim/taglist
+	url = https://github.com/vim-scripts/taglist.vim
+[submodule "bundle/endwise"]
+	path = bundle/endwise
+	url = https://github.com/tpope/vim-endwise
