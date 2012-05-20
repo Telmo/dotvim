@@ -126,6 +126,15 @@ autocmd BufRead *.boo set ft=boo|map <F5> <ESC>:! clear && booi %<Enter>
 " This blows away [http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-V i_CTRL-V] though
 imap <C-v> <Esc><C-v>a
 
+" from http://vimcasts.org/episodes/bubbling-text/
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
+
 "Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
