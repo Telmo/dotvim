@@ -7,6 +7,7 @@ filetype plugin on
 filetype indent on
 colorscheme railscasts
 scriptencoding utf-8
+let g:Powerline_symbols = 'fancy'
 
 
 " Set it to internal VIM Help
