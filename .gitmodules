@@ -46,3 +46,7 @@
 	path = bundle/powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
 	ignore = dirty
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+	ignore = dirty
