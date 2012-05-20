@@ -50,3 +50,6 @@
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
 	ignore = dirty
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim
