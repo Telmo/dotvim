@@ -10,6 +10,7 @@ scriptencoding utf-8
 let g:Powerline_symbols = 'fancy'
 
 
+
 " Set it to internal VIM Help
 set keywordprg=:help
 
@@ -87,6 +88,7 @@ set fo-=o "dont continue comments when pushing o/O
 set notagbsearch
 " Show extra information when using tags in insert mode
 set showfulltag
+set clipboard=unnamed " This is for tmux copy and paster stuff
 
 
 autocmd FileType ruby  set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab|map <F5> <ESC>:! clear && ruby %<Enter>
