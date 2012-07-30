@@ -11,6 +11,7 @@ au! BufRead,BufNewFile *.mkd          setfiletype mkd
 au! BufRead,BufNewFile *.irb          setfiletype ruby
 au! BufRead,BufNewFile *.ru           setfiletype ruby
 au! BufRead,BufNewFile *.text         setfiletype textile
+au! BufRead,BufNewFile dhcpd.*         setfiletype dhcpd
 " au! BufRead,BufNewFile *.text         setfiletype textile
 au! BufRead,BufNewFile *_spec.rb      setfiletype rspec
 au! BufRead,BufNewFile /etc/nginx/* set ft=nginx 
