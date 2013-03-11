@@ -8,6 +8,7 @@ au! BufRead,BufNewFile *.mab          set ft=ruby
 au! BufRead,BufNewFile *.haml         setfiletype haml
 au! BufRead,BufNewFile *.sass         setfiletype sass
 au! BufRead,BufNewFile *.mkd          setfiletype mkd
+au! BufRead,BufNewFile *.md          setfiletype mkd
 au! BufRead,BufNewFile *.irb          setfiletype ruby
 au! BufRead,BufNewFile *.ru           setfiletype ruby
 au! BufRead,BufNewFile *.text         setfiletype textile
