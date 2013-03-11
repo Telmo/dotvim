@@ -92,6 +92,7 @@ set clipboard=unnamed " This is for tmux copy and paster stuff
 
 
 autocmd FileType ruby  set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab|map <F5> <ESC>:! clear && ruby %<Enter>
+autocmd FileType puppet  set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab
 autocmd FileType rdoc  set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab
 autocmd FileType eruby set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab
 autocmd FileType thor set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab
@@ -116,9 +117,11 @@ autocmd BufRead *.markdown set ft=mkd
 autocmd BufRead *.liquid set ft=html
 autocmd BufRead *.vb set ft=vbnet
 autocmd BufRead *.pp set ft=ruby
+autocmd BufRead *.god set ft=ruby
 autocmd BufRead *.thor set ft=ruby
 autocmd BufRead *.js set ft=javascript
 autocmd BufRead *.feature set ft=cucumber
+autocmd BufRead *.pp set ft=puppet
 
 " *.me files (markdown + erb)
 autocmd BufRead *.me set ft=mkd|set ft=eruby.mkd
