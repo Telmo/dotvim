@@ -1,9 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/rmoral00/Development/GIT/copa_provisioning_web/src/app/copa/copa-web-provisioning/views'
-let g:netrw_dirhist_2='/Users/rmoral00/Development/GIT/copa_provisioning_web/src/app/copa/copa-web-provisioning/lib'
-let g:netrw_dirhist_3='/Users/rmoral00/Development/GIT/atlas_server/src/app/copa/atlas-conf'
-let g:netrw_dirhist_4='/Users/rmoral00/.dotfiles/bash/bash_functions.symlink'
-let g:netrw_dirhist_5='/Users/rmoral00/tmp/test/spec'
-let g:netrw_dirhist_6='/Users/rmoral00/autotu/_layouts'
-let g:netrw_dirhist_7='/Users/rmoral00/autotu/_posts'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/rmoral00/Development/git/magneto/lib/magneto'
+let g:netrw_dirhist_2='/Users/rmoral00/Development/magneto-lower/environments/lower/manifests'
+let g:netrw_dirhist_3='/Users/rmoral00/Development/magneto-lower/environments/roberto/modules/puppetmaster/manifests'
+let g:netrw_dirhist_4='/Users/rmoral00/Development/magneto-lower/environments/lower/manifests'
