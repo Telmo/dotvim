@@ -1,6 +1,31 @@
-call pathogen#infect()
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+" original repos on github
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'rodjek/vim-puppet'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/Syntastic'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'vim-scripts/vimux'
+Bundle 'jpalardy/vim-slime'
+Bundle 'vim-scripts/taglist.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
 syntax on
 filetype on
 filetype plugin on
@@ -66,9 +91,9 @@ set nocompatible
 " set foldmethod=syntax
 " set foldnestmax=2
 "set expandtab       " insert space characters when tab is presses
-set tabstop=4       " number of spaces to insert
-set shiftwidth=4    " number of spaces inserted for indentation
-set softtabstop=4   " makes spaces 'feel like' tabs ?
+set tabstop=2       " number of spaces to insert
+set shiftwidth=2    " number of spaces inserted for indentation
+set softtabstop=2   " makes spaces 'feel like' tabs ?
 " set spell " in case we need spell checking
 set title " update the title of the window
 set titlestring=VIM:\ %-25.55F\ %a%r%m titlelen=70 " Title String: what will actually be displayed
