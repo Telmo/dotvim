@@ -24,6 +24,7 @@ Bundle 'jpalardy/vim-slime'
 Bundle 'vim-scripts/taglist.vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
+Bundle "SirVer/ultisnips"
 
 syntax on
 filetype on
