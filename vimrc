@@ -11,7 +11,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/powerline'
 Bundle 'rodjek/vim-puppet'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-repeat'
@@ -129,6 +129,7 @@ autocmd FileType css  set tabstop=2|set shiftwidth=2|set softtabstop=2|set expan
 autocmd FileType markdown set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab
 autocmd FileType mkd set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab
+autocmd FileType go set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab
 " for 2html
 let g:html_use_css = 1
 let g:html_use_encoding = "utf8"
@@ -148,6 +149,7 @@ autocmd BufRead *.thor set ft=ruby
 autocmd BufRead *.js set ft=javascript
 autocmd BufRead *.feature set ft=cucumber
 autocmd BufRead *.pp set ft=puppet
+autocmd BufRead *.go set ft=go
 
 " *.me files (markdown + erb)
 autocmd BufRead *.me set ft=mkd|set ft=eruby.mkd
