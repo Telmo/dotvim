@@ -1,7 +1,7 @@
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
@@ -11,7 +11,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/powerline'
+Bundle 'bling/vim-airline'
 Bundle 'rodjek/vim-puppet'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-repeat'
@@ -33,8 +33,18 @@ filetype plugin on
 filetype indent on
 colorscheme railscasts
 scriptencoding utf-8
-let g:Powerline_symbols = 'fancy'
-
+" let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
+let g:airline_theme= 'murmur'
+set ambiwidth=double
+let g:bufferline_echo = 0
+set laststatus=2
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#branch#enabled = 1
 
 
 " Set it to internal VIM Help
@@ -43,9 +53,9 @@ set keywordprg=:help
 set directory=/tmp/
 
 if v:version >= 703
-" Set undofile.
-  set undofile
-  let &undodir=&directory
+	" Set undofile.
+	set undofile
+	let &undodir=&directory
 endif
 
 set autoread                            " Set to auto read when a file is changed from the outside
@@ -85,7 +95,7 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-set showbreak=…
+set showbreak=_
 set modeline
 set modelines=0
 set nocompatible
@@ -137,7 +147,7 @@ let g:use_xhtml = 1
 
 " for markdown
 augroup mkd
-    autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
+	autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
 augroup END
 
 autocmd BufRead *.markdown set ft=mkd
@@ -183,8 +193,8 @@ nmap <leader>s :source ~/.vimrc<CR> " re-read vimrc
 nmap <leader>sp :set spell!<CR>
 nmap <leader>v :tabe ~/.vimrc<CR> " edit vimrc in a new tab
 nmap <leader>tn :tabnext<CR>
-nmap <leader>tp :tabprevious<CR>  
-nmap <leader>te :tabedit  
+nmap <leader>tp :tabprevious<CR>
+nmap <leader>te :tabedit
 nmap <F1> <Esc> " Remap F1 from Help \so ESC.  No more accidents
 map! <F1> <Esc> " Remap F1 from Help to ESC.  No more accidents
 map <F2> :NERDTreeToggle<CR>
