@@ -13,7 +13,7 @@ Installation requires Git and triggers git clone for each configured repository 
 * [vim-fugitive](https://github.com/tpope/vim-fugitive): Git wrapper inside of VIM, do things like Bring up the output of `git status` with `:Gstatus`. Press `- `to `add/reset` a file's changes, or `p` to `add/reset` `--patch` that mofo. And guess what `:Gcommit` does!
 * [vim-markdown](https://github.com/tpope/vim-markdown): Markdown runtime files
 * [nerdtree](https://github.com/scrooloose/nerdtree): The NERD tree allows you to explore your filesystem and to open files and directories. It presents the filesystem to you in the form of a tree which you manipulate with the keyboard and/or mouse. It also allows you to perform simple filesystem operations.
-* [powerline](https://github.com/Lokaltog/powerline): Powerline is a statusline plugin for vim **NOTE** read https://powerline.readthedocs.org/en/latest/ you will need patched fonts for it to work
+* [airline](https://github.com/bling/vim-airline): lean & mean status/tabline for vim that's light as air
 * [vim-puppet](https://github.com/rodjek/vim-puppet): Puppet niceties for your Vim setup
 * [vim-rake](https://github.com/tpope/vim-rake): With rake.vim, you can use all those parts of rails.vim that you wish you could use on your other Ruby projects on anything with a Rakefile, including :A, :Elib and friends, and of course :Rake. It's great when paired with gem open and bundle open and complemented nicely by bundler.vim.
 * [vim-repeat](https://github.com/tpope/vim-repeat): repeat.vim: enable repeating supported plugin maps with "."
