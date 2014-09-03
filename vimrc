@@ -1,32 +1,76 @@
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " My Bundles here:
 " original repos on github
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-Bundle 'scrooloose/nerdtree'
-Bundle 'bling/vim-airline'
-Bundle 'rodjek/vim-puppet'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/Syntastic'
-Bundle 'ervandew/supertab'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-scripts/vimux'
-Bundle 'jpalardy/vim-slime'
-Bundle 'vim-scripts/taglist.vim'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "SirVer/ultisnips"
-Bundle "golangtw/go.vim"
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/nerdtree'
+" http://vimawesome.com/plugin/vim-nerdtree-tabs
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'bling/vim-airline'
+Plugin 'rodjek/vim-puppet'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/Syntastic'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'vim-scripts/vimux'
+Plugin 'jpalardy/vim-slime'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'golangtw/go.vim'
+" http://vimawesome.com/plugin/json-vim
+Plugin 'elzr/vim-json'
+" http://vimawesome.com/plugin/minibufexpl-vim
+Plugin 'fholgado/minibufexpl.vim'
+" http://vimawesome.com/plugin/trailing-whitespace :FixWhitespace
+Plugin 'bronson/vim-trailing-whitespace'
+" http://vimawesome.com/plugin/vim-ruby-refactoring
+Plugin 'ecomba/vim-ruby-refactoring'
+" http://vimawesome.com/plugin/nginx-vim
+Plugin 'nginx.vim'
+" http://vimawesome.com/plugin/vroom
+Plugin 'skalnik/vim-vroom'
+" http://vimawesome.com/plugin/vim-rspec-sad-beautiful-tragic
+Plugin 'skwp/vim-rspec'
+" http://vimawesome.com/plugin/vitality
+Plugin 'sjl/vitality.vim'
+" http://vimawesome.com/plugin/dockerfile-vim
+Plugin 'ekalinin/Dockerfile.vim'
+" http://vimawesome.com/plugin/xterm-color-table-vim
+Plugin 'guns/xterm-color-table.vim'
+" http://vimawesome.com/plugin/tbone-vim
+Plugin 'tpope/vim-tbone'
+" http://vimawesome.com/plugin/vim-yaml-all-too-well
+Plugin 'avakhov/vim-yaml'
+" http://vimawesome.com/plugin/powerline-fonts
+Plugin 'Lokaltog/powerline-fonts'
+" http://vimawesome.com/plugin/source-explorer-srcexpl
+Plugin 'wesleyche/srcexpl'
+" http://vimawesome.com/plugin/investigate-vim
+Plugin 'Keithbsmiley/investigate.vim'
+" http://vimawesome.com/plugin/tabbar-red
+Plugin 'humiaozuzu/TabBar'
+" http://vimawesome.com/plugin/vim-toml
+Plugin 'cespare/vim-toml'
+" http://vimawesome.com/plugin/rbrepl-vim
+" Plugin 'Bogdanp/rbrepl.vim'
+" http://vimawesome.com/plugin/vim-systemd-syntax-shouldve-said-no
+Plugin 'Matt-Deacalion/vim-systemd-syntax'
 
+
+call vundle#end()
 syntax on
 filetype on
 filetype plugin on
