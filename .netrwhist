@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/rmoral00/Development/git/magneto/lib/magneto'
 let g:netrw_dirhist_2='/Users/rmoral00/Development/magneto-lower/environments/lower/manifests'
 let g:netrw_dirhist_3='/Users/rmoral00/Development/magneto-lower/environments/roberto/modules/puppetmaster/manifests'
 let g:netrw_dirhist_4='/Users/rmoral00/Development/magneto-lower/environments/lower/manifests'
+let g:netrw_dirhist_5='/Users/rmoral00/Work/Development/copa_provisioning_web/src/app/copa/copa-web-provisioning/public/js'
+let g:netrw_dirhist_6='/Users/rmoral00/Work/Development/GITLAB/pgc/Sprint22/Roberto/v5/conf.d'
+let g:netrw_dirhist_7='/Users/rmoral00/Work/Development/GITLAB/pgc/Sprint22/Roberto/v6/conf.d'
+let g:netrw_dirhist_8='/Users/rmoral00/Work/Development/gitlab/pgc/Sprint22/Roberto/v6/templates'

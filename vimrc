@@ -29,7 +29,7 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'SirVer/ultisnips'
-Plugin 'golangtw/go.vim'
+Plugin 'fatih/vim-go'
 " http://vimawesome.com/plugin/json-vim
 Plugin 'elzr/vim-json'
 " http://vimawesome.com/plugin/minibufexpl-vim
@@ -61,13 +61,17 @@ Plugin 'wesleyche/srcexpl'
 " http://vimawesome.com/plugin/investigate-vim
 Plugin 'Keithbsmiley/investigate.vim'
 " http://vimawesome.com/plugin/tabbar-red
-Plugin 'humiaozuzu/TabBar'
+" Plugin 'humiaozuzu/TabBar'
 " http://vimawesome.com/plugin/vim-toml
 Plugin 'cespare/vim-toml'
 " http://vimawesome.com/plugin/rbrepl-vim
 " Plugin 'Bogdanp/rbrepl.vim'
 " http://vimawesome.com/plugin/vim-systemd-syntax-shouldve-said-no
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
+Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'Valloric/YouCompleteMe'
 
 
 call vundle#end()
@@ -89,7 +93,11 @@ endif
 let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline = 1
+let g:airline#extensions#fnamemod = ':t'
 
+" Go stuff
+let g:go_fmt_command = "goimports"
 
 " Set it to internal VIM Help
 set keywordprg=:help
@@ -246,6 +254,7 @@ map <F2> :NERDTreeToggle<CR>
 " _ will uncomment it
 map _ :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//:nohlsearch
 map - :s/^/#/:nohlsearch
+nmap <F8> :TagbarToggle<CR>
 
 " if $COLORTERM == 'gnome-terminal'
 "     set term=gnome-256color
