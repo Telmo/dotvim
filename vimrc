@@ -99,10 +99,6 @@ let g:airline#extensions#fnamemod = ':t'
 " Go stuff
 let g:go_fmt_command = "goimports"
 
-" Set it to internal VIM Help
-set keywordprg=:help
-
-set directory=/tmp/
 
 if v:version >= 703
 	" Set undofile.
@@ -110,6 +106,8 @@ if v:version >= 703
 	let &undodir=&directory
 endif
 
+set directory=/tmp/
+set keywordprg=:help      " Set it to internal VIM Help
 set autoread                            " Set to auto read when a file is changed from the outside
 set nobackup                            " Do not create backup files when saving over existing files
 set nowritebackup                       " A little paranoid, but disable the writebackup function as well
@@ -177,7 +175,7 @@ set notagbsearch
 " Show extra information when using tags in insert mode
 set showfulltag
 set clipboard=unnamed " This is for tmux copy and paster stuff
-
+set grepprg=ag\ --nogroup\ --nocolor
 
 autocmd FileType ruby  set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab|map <F5> <ESC>:! clear && ruby %<Enter>
 autocmd FileType puppet  set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab
@@ -212,6 +210,9 @@ autocmd BufRead *.js set ft=javascript
 autocmd BufRead *.feature set ft=cucumber
 autocmd BufRead *.pp set ft=puppet
 autocmd BufRead *.go set ft=go
+
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufWritePost *.go silent :GoImports
 
 " *.me files (markdown + erb)
 autocmd BufRead *.me set ft=mkd|set ft=eruby.mkd
@@ -268,3 +269,12 @@ nmap <F8> :TagbarToggle<CR>
 set fo-=o " Automatically insert the current comment leader after hitting
 set fo-=r " Do not automatically insert a comment leader after an enter
 set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
+
+
+" UltiSnips stuff
+" let g:UltiSnipsExpandTrigger="<c-]>"
+let g:UltiSnipsExpandTrigger="<F3>"
+let g:UltiSnipsEditSplit="vertical"
+
+"+++ Closetag +++
+"autocmd FileType html,eruby,erb,tmpl let b:closetag_html_style=1
