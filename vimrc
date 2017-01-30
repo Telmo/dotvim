@@ -4,7 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle
 " required!
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles here:
 " original repos on github
@@ -15,7 +15,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 " http://vimawesome.com/plugin/vim-nerdtree-tabs
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rodjek/vim-puppet'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-repeat'
@@ -30,6 +31,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'fatih/vim-go'
+Plugin 'rking/ag.vim'
 " http://vimawesome.com/plugin/json-vim
 Plugin 'elzr/vim-json'
 " http://vimawesome.com/plugin/minibufexpl-vim
@@ -72,6 +74,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'pearofducks/ansible-vim'
 
 
 call vundle#end()
@@ -276,5 +279,32 @@ set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
 let g:UltiSnipsExpandTrigger="<F3>"
 let g:UltiSnipsEditSplit="vertical"
 
+" UnDo magic
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+
 "+++ Closetag +++
 "autocmd FileType html,eruby,erb,tmpl let b:closetag_html_style=1
+"
+" open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Sometimes when using both vim-go and syntastic Vim will start lagging while
+" saving and opening files. The following fixes this:
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+" Another issue with vim-go and syntastic is that the location list window
+" that contains the output of commands such as :GoBuild and :GoTest might not
+" appear. To resolve this:
+let g:go_list_type = "quickfix"
+
+" Ansible VIM options
+let g:ansible_extra_syntaxes = "sh.vim ruby.vim"
+let g:ansible_attribute_highlight = "ab"
+let g:ansible_name_highlight = 'b'
